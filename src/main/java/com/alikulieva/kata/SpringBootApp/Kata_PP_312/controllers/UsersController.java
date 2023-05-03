@@ -5,11 +5,11 @@ import com.alikulieva.kata.SpringBootApp.Kata_PP_312.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
+//import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/users")
@@ -40,10 +40,10 @@ public class UsersController {
     }
 
     @PostMapping()
-    public String create(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "new";
-        }
+    public String create(@ModelAttribute("user") /*@Valid*/ User user/*, BindingResult bindingResult*/) {
+//        if (bindingResult.hasErrors()) {
+//            return "new";
+//        }
         userService.save(user);
         return "redirect:/users";
     }
@@ -55,10 +55,10 @@ public class UsersController {
     }
 
     @PostMapping(value = "/edit")
-    public String update(@ModelAttribute("user") @Valid User user, BindingResult bindingResult) {
-        if (bindingResult.hasErrors()) {
-            return "edit";
-        }
+    public String update(@ModelAttribute("user") /*@Valid*/ User user/*, BindingResult bindingResult*/) {
+//        if (bindingResult.hasErrors()) {
+//            return "edit";
+//        }
         userService.update(user);
         return "redirect:/users";
     }

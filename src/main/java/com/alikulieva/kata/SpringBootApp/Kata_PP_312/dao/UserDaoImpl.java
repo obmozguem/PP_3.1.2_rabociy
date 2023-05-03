@@ -2,11 +2,12 @@ package com.alikulieva.kata.SpringBootApp.Kata_PP_312.dao;
 
 
 import com.alikulieva.kata.SpringBootApp.Kata_PP_312.models.User;
+import jakarta.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
+import jakarta.persistence.EntityManager;
 
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+//import javax.persistence.EntityManager;
+//import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
